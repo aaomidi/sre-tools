@@ -13,3 +13,6 @@
 
 # Output of the chain-auditor tool
 chain-audit-*
+
+# IntelliJ/GoLand/etc
+.idea
