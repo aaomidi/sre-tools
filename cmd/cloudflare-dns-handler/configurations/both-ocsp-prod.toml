@@ -1,52 +1,52 @@
-zone_identifier = "letsencrypt.org"
+zone_identifier = "we will have to get this from an API call"
 
 [records]
 
 [records.ocsp01-slc]
 type = "A"
-name = "akamai-14e3e4928.prod-ocsp"
+name = "akamai-14e3e4928.prod-ocsp.letsencrypt.org"
 content = "64.78.149.173"
-ttl = "120"
+ttl = 120
 proxy = false
 exist = true
 
 [records.ocsp02-slc]
 type = "A"
-name = "akamai-14e3e4928.prod-ocsp"
+name = "akamai-14e3e4928.prod-ocsp.letsencrypt.org"
 content = "64.78.149.166"
-ttl = "120"
+ttl = 120
 proxy = false
 exist = true
 
 [records.ocsp03-slc]
 type = "A"
-name = "akamai-14e3e4928.prod-ocsp"
+name = "akamai-14e3e4928.prod-ocsp.letsencrypt.org"
 content = "64.78.149.165"
-ttl = "120"
+ttl = 120
 proxy = false
 exist = true
 
 [records.ocsp01-den]
 type = "A"
-name = "akamai-14e3e4928.prod-ocsp"
+name = "akamai-14e3e4928.prod-ocsp.letsencrypt.org"
 content = "66.133.109.45"
-ttl = "120"
+ttl = 120
 proxy = false
 exist = true
 
 [records.ocsp02-den]
 type = "A"
-name = "akamai-14e3e4928.prod-ocsp"
+name = "akamai-14e3e4928.prod-ocsp.letsencrypt.org"
 content = "66.133.109.38"
-ttl = "120"
+ttl = 120
 proxy = false
 exist = true
 
 [records.ocsp03-den]
 type = "A"
-name = "akamai-14e3e4928.prod-ocsp"
+name = "akamai-14e3e4928.prod-ocsp.letsencrypt.org"
 content = "66.133.109.37"
-ttl = "120"
+ttl = 120
 proxy = false
 exist = true
 
