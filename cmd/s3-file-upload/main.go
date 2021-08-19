@@ -147,6 +147,7 @@ func main() {
 	putFilename := flag.String("put-file", "", "Path to file you want uploaded to the S3 bucket")
 	deleteFilename := flag.String("delete-file", "", "Name of the file you want deleted from the S3 bucket")
 	listBucket := flag.Bool("list-bucket", false, "List contents of the S3 bucket to stdout")
+	putFilenamePrefix := flag.String("put-filename-prefix", "", "Prefix to apply to the key of uploaded files")
 	flag.Parse()
 
 	conf, err := unmarshalConf(*configFilename)
@@ -166,7 +167,7 @@ func main() {
 	}
 
 	if *putFilename != "" {
-		err := putFile(conf, client, *putFilename)
+		err := putFile(conf, client, fmt.Sprintf("%s%s", *putFilenamePrefix, *putFilename))
 		if err != nil {
 			log.Fatalf("failed to upload file: %q to bucket: %q due to: %s", *putFilename, conf.BucketName, err)
 		}
