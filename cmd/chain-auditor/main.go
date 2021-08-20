@@ -52,7 +52,7 @@ var tlsVersions = map[uint16]string{
 // chainContainsR3 checks if a chain of certs contains a certificate
 // where the Subject Common Name matches the const of r3
 func chainContainsR3(chain []*x509.Certificate) bool {
-	for _, cabs := range chain[1:] {
+	for _, cert := range chain[1:] {
 		if cert.Subject.CommonName == r3 {
 			return true
 		}
