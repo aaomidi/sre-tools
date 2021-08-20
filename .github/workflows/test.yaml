@@ -10,14 +10,10 @@ on:
 
 jobs:
   golangci:
-    name: lint
+    name: coverage and lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          GO111MODULE=off go get golang.org/x/tools/cmd/cover
-          GO111MODULE=off go get github.com/mattn/goveralls
-          go install -mod=vendor -v -race ./...
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v2
         with:
