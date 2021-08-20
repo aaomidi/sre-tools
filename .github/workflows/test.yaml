@@ -26,4 +26,4 @@ jobs:
         with:
           file: ./coverage.out
           flags: sretools_tests
-          name: sre-tools tests # optional
+          name: sre-tools tests
